@@ -1,0 +1,15 @@
+{
+  "env": {
+    "test": {
+      "plugins": [
+        ["istanbul", 
+          {
+            "exclude": [
+              "**/*.spec.js"
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}

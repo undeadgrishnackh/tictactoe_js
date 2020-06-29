@@ -1,0 +1,42 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/start.js",
+  "scripts": {
+    "test": "mocha --require @babel/register test/**/*spec.js",
+    "start": "node -r @babel/register ./src/start.js",
+    "debug": "nodemon ./src/start.js --inspect --exec babel-node -- --compilers js:babel/register",
+    "coverage": "nyc --reporter=lcov --reporter=text mocha --require @babel/register test/**/*spec.js"
+  },
+  "keywords": [
+    "KATA",
+    "TDD",
+    "TicTacToe",
+    "NodeJs"
+  ],
+  "author": "Undeadgrishnackh",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "@types/mathjs": "^4.4.3",
+    "babel-plugin-istanbul": "^5.1.0",
+    "chai": "^4.2.0",
+    "mathjs": "^5.3.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "sinon": "^7.1.1",
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
+  }
+}
